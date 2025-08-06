@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Strings Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            max-width: 600px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            color: #005a9c;
+        }
+        pre {
+            white-space: pre-wrap;
+            background-color: #e8f0fe;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JavaScript String Examples</h1>
+
+<div id="output"></div>
+
+<script>
+    const output = document.getElementById('output');
+
+    function createSection(title, content) {
+        const section = document.createElement('section');
+        const heading = document.createElement('h2');
+        heading.textContent = title;
+        const pre = document.createElement('pre');
+        pre.textContent = content;
+        section.appendChild(heading);
+        section.appendChild(pre);
+        output.appendChild(section);
+    }
+
+    // 1. String declarations
+    const singleQuote = 'Hello World';
+    const doubleQuote = "Hello JavaScript";
+    const templateLiteral = `Template literal example`;
+
+    createSection("String Declarations", 
+        `Single Quote: '${singleQuote}'\n` + 
+        `Double Quote: "${doubleQuote}"\n` + 
+        `Template Literal: \`${templateLiteral}\``);
+
+    // 2. Concatenation
+    const greet = "Hello";
+    const name = "Alice";
+    const concatStr = greet + ", " + name + "!";
+    const templateStr = `${greet}, ${name}! Welcome to JS strings.`;
+
+    createSection("String Concatenation",
+        `Using + operator: ${concatStr}\n` +
+        `Using template literal: ${templateStr}`);
+
+    // 3. String properties & methods
+    const sample = "JavaScript";
+
+    createSection("String Properties & Methods",
+        `Original string: "${sample}"\n` +
+        `Length: ${sample.length}\n` +
+        `To Uppercase: ${sample.toUpperCase()}\n` +
+        `To Lowercase: ${sample.toLowerCase()}\n` +
+        `Substring (4,10): ${sample.substring(4, 10)}\n` +
+        `Char at index 0: ${sample.charAt(0)}\n` +
+        `Includes "Script": ${sample.includes("Script")}\n` +
+        `Starts with "Java": ${sample.startsWith("Java")}\n` +
+        `Ends with "script": ${sample.endsWith("script")}`  // case-sensitive
+    );
+
+    // 4. Escape sequences
+    const escapeSeq = "Line1\nLine2\tTabbed \'Single quotes\' \"Double quotes\"";
+
+    createSection("Escape Sequences",
+        escapeSeq);
+
+    // 5. Multi-line string (template literal)
+    const multiLine = `Line one
+Line two
+Line three`;
+
+    createSection("Multi-line String (Template Literal)",
+        multiLine);
+
+    // 6. Trim whitespace
+    const spaced = "   Hello Trim   ";
+
+    createSection("Trimming Strings",
+        `Original: "*${spaced}*"\n` +
+        `trim(): "*${spaced.trim()}*"\n` +
+        `trimStart(): "*${spaced.trimStart()}*"\n` +
+        `trimEnd(): "*${spaced.trimEnd()}*"`
+    );
+
+</script>
+
+</body>
+</html>
