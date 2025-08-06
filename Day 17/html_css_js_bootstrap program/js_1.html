@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basics Of Javascript</title>
+    <script>
+        // Original variable assignments and logging
+        i = 10;
+        document.write(i + "<br/>");
+        console.log(i);
+
+        i = 20.22;
+        document.write(i + "<br/>");
+        console.log(i);
+
+        i = 2342.23423;
+        document.write(i + "<br/>");
+        console.log(i);
+
+        i = 'w';
+        document.write(i + "<br/>");
+        console.log(i);
+
+        i = "wipro";
+        document.write(i + "<br/>");
+        console.log(i);
+
+        a = 10;
+        b = 20;
+        console.log('Addition result is :' + (a + b));
+        console.log('Subtraction result is :' + (a - b));
+        console.log('Multiplication result is :' + (a * b));
+        console.log('Division result is :' + (a / b));
+        console.log('Modulus result is :' + (a % b));
+
+        // --- Implicit Type Conversion Examples ---
+        // Adding number and string causes number to convert to string implicitly (concatenation)
+        let implicitResult1 = 'The number is ' + 10; // 10 becomes string '10'
+        document.write(implicitResult1 + "<br/>");
+        console.log(implicitResult1);
+
+        // Subtract operator converts string to number implicitly
+        let implicitResult2 = '20' - 5; // '20' string converted to number 20
+        document.write('Implicit subtraction result: ' + implicitResult2 + "<br/>");
+        console.log(implicitResult2);
+
+        // Boolean true implicitly converts to 1 in numeric context
+        let implicitResult3 = true + 2; // true -> 1
+        document.write('Implicit boolean addition result: ' + implicitResult3 + "<br/>");
+        console.log(implicitResult3);
+
+        // --- Explicit Type Conversion Examples ---
+        let strNumber = "123";
+        let explicitResult1 = Number(strNumber); // converts '123' string to number 123
+        document.write('Explicit conversion to Number: ' + explicitResult1 + "<br/>");
+        console.log(explicitResult1);
+
+        let num = 456;
+        let explicitResult2 = String(num); // converts number 456 to string '456'
+        document.write('Explicit conversion to String: ' + explicitResult2 + "<br/>");
+        console.log(explicitResult2);
+
+        let boolValue = 0;
+        let explicitResult3 = Boolean(boolValue); // converts 0 to false boolean
+        document.write('Explicit conversion to Boolean: ' + explicitResult3 + "<br/>");
+        console.log(explicitResult3);
+
+
+               age = 18;
+        if (age >= 18) {
+            console.log('valid for voting');
+        } else {
+            console.log('Not for voting');
+        }
+
+        
+    </script>
+</head>
+<body>
+</body>
+</html>
